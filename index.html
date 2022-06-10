@@ -1,10 +1,5 @@
 <!DOCTYPE html>
 <html data-wf-page="629fcd20a3c6e3a6f49d1423" data-wf-site="629fcd20a3c6e3682b9d1428" lang="zh">
-  <?php
-  require_once "jssdk.php";
-  $jssdk = new JSSDK("wxb80bcbf68dd70ce6", "bf5c14375cccca3ae42594a276bc9dc9");
-  $signPackage = $jssdk->GetSignPackage();
-  ?>
 <head>
   <meta charset="utf-8">
   <title>东南阙里 宋韵儒风</title>
@@ -23,47 +18,9 @@
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
   <link href="css/fyzl.webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/btn.css" rel="stylesheet" type="text/css">
   <script src="https://ajax.font.im/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
   <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
-  <script>
-    /*
-   * 注意：
-   * 1. 所有的JS接口只能在公众号绑定的域名下调用，公众号开发者需要先登录微信公众平台进入“公众号设置”的“功能设置”里填写“JS接口安全域名”。
-   * 2. 如果发现在 Android 不能分享自定义内容，请到官网下载最新的包覆盖安装，Android 自定义分享接口需升级至 6.0.2.58 版本及以上。
-   * 3. 常见问题及完整 JS-SDK 文档地址：http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html
-   *
-   * 开发中遇到问题详见文档“附录5-常见错误及解决办法”解决，如仍未能解决可通过以下渠道反馈：
-   * 邮箱地址：weixin-open@qq.com
-   * 邮件主题：【微信JS-SDK反馈】具体问题
-   * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
-   */
-  wx.config({
-    debug: true,
-    appId: '<?php echo $signPackage["appId"];?>',
-    timestamp: '<?php echo $signPackage["timestamp"];?>',
-    nonceStr: '<?php echo $signPackage["nonceStr"];?>',
-    signature: '<?php echo $signPackage["signature"];?>',
-    jsApiList: [
-    'wx.onMenuShareAppMessage'
-    ]
-  });
-      wx.ready(function () {   //需在用户可能点击分享按钮前就先调用
-        wx.onMenuShareAppMessage({
-          title: '东南阙里 宋韵儒风', // 分享标题
-          desc: '看非遗，识衢州，千年历史，一路风景', // 分享描述
-          link: '', // 分享链接，该链接域名或路径必须与当前页面对应的公众号 JS 安全域名一致
-          imgUrl: 'images/webclip.jpg', // 分享图标
-          type: '', // 分享类型,music、video或link，不填默认为link
-          dataUrl: '', // 如果 type 是music或video，则要提供数据链接，默认为空
-          success: function () {
-            // 用户点击了分享后执行的回调函数
-          }
-        });
-      });
-      
-    
-    
-  </script>
   <script
     type="text/javascript">WebFont.load({ google: { families: ["Noto Serif SC:regular:chinese-simplified,latin"] } });</script>
   <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
@@ -128,7 +85,7 @@
         </p>
       </div>
       <div class="vedio">
-        <div class="video w-embed"><video width="100%" hight="auto" controls="true"
+        <div class="video w-embed"><video width="100%" hight="auto" controls="true" playsinline
             src="https://ali-v.cztv.com/cztv/vod/2022/06/09/0b08b3c2caa74118a43e45cf36119cf4/h264_1500k_mp4.mp4">
           </video></div><img src="images/frame.svg" loading="eager" alt="">
       </div>
@@ -147,7 +104,7 @@
         </p>
       </div>
       <div class="vedio">
-        <div class="video w-embed"><video width="100%" hight="auto" controls="true"
+        <div class="video w-embed"><video width="100%" hight="auto" controls="true" playsinline
             src="https://ali-v.cztv.com/cztv/vod/2022/06/09/0945b0285bf240769ec91fd79f9f071e/h264_1500k_mp4.mp4">
           </video></div><img src="images/frame.svg" loading="eager" alt="">
       </div>
@@ -166,7 +123,7 @@
         </p>
       </div>
       <div class="vedio">
-        <div class="video w-embed"><video width="100%" hight="auto" controls="true"
+        <div class="video w-embed"><video width="100%" hight="auto" controls="true" playsinline
             src="https://ali-v.cztv.com/cztv/vod/2022/06/09/23c9caca71a84ac8898788fb1ecfca41/h264_1500k_mp4.mp4">
           </video></div><img src="images/frame.svg" loading="eager" alt="">
       </div>
@@ -185,7 +142,7 @@
         </p>
       </div>
       <div class="vedio">
-        <div class="video w-embed"><video width="100%" hight="auto" controls="true"
+        <div class="video w-embed"><video width="100%" hight="auto" controls="true" playsinline
             src="https://ali-v.cztv.com/cztv/vod/2022/06/09/8ab0407a9374450e8a2c4a706f672a1a/h264_1500k_mp4.mp4">
           </video></div><img src="images/frame.svg" loading="eager" alt="">
       </div>
@@ -204,7 +161,7 @@
         </p>
       </div>
       <div class="vedio">
-        <div class="video w-embed"><video width="100%" hight="auto" controls="true"
+        <div class="video w-embed"><video width="100%" hight="auto" controls="true" playsinline
             src="https://ali-v.cztv.com/cztv/vod/2022/06/09/5b5c1530505b4cf18972b1c3d0792273/h264_1500k_mp4.mp4">
           </video></div><img src="images/frame.svg" loading="eager" alt="">
       </div>
@@ -223,7 +180,7 @@
         </p>
       </div>
       <div class="vedio">
-        <div class="video w-embed"><video width="100%" hight="auto" controls="true"
+        <div class="video w-embed"><video width="100%" hight="auto" controls="true" playsinline
             src="https://ali-v.cztv.com/cztv/vod/2022/06/09/e1b264562bb04662befb2769d9ae9422/h264_1500k_mp4.mp4">
           </video></div><img src="images/frame.svg" loading="eager" alt="">
       </div>
@@ -242,7 +199,7 @@
         </p>
       </div>
       <div class="vedio">
-        <div class="video w-embed"><video width="100%" hight="auto" controls="true"
+        <div class="video w-embed"><video width="100%" hight="auto" controls="true" playsinline
             src="https://ali-v.cztv.com/cztv/vod/2022/06/09/f783fb6f49b142e3b0fc95855af98263/h264_1500k_mp4.mp4">
           </video></div><img src="images/frame.svg" loading="eager" alt="">
       </div>
@@ -261,7 +218,7 @@
         </p>
       </div>
       <div class="vedio">
-        <div class="video w-embed"><video width="100%" hight="auto" controls="true"
+        <div class="video w-embed"><video width="100%" hight="auto" controls="true" playsinline
             src="https://ali-v.cztv.com/cztv/vod/2022/06/09/667cca63a96040fdbc1b35b01e875683/h264_1500k_mp4.mp4">
           </video></div><img src="images/frame.svg" loading="eager" alt="">
       </div>
@@ -280,7 +237,7 @@
         </p>
       </div>
       <div class="vedio">
-        <div class="video w-embed"><video width="100%" hight="auto" controls="true"
+        <div class="video w-embed"><video width="100%" hight="auto" controls="true" playsinline
             src="https://ali-v.cztv.com/cztv/vod/2022/06/09/30d7eeebaea249dab679af113ea01e7b/h264_1500k_mp4.mp4">
           </video></div><img src="images/frame.svg" loading="eager" alt="">
       </div>
@@ -299,7 +256,7 @@
         </p>
       </div>
       <div class="vedio">
-        <div class="video w-embed"><video width="100%" hight="auto" controls="true"
+        <div class="video w-embed"><video width="100%" hight="auto" controls="true" playsinline
             src="https://ali-v.cztv.com/cztv/vod/2022/06/09/18b4f658546341cfae3528a70775b461/h264_1500k_mp4.mp4">
           </video></div><img src="images/frame.svg" loading="eager" alt="">
       </div>
@@ -318,7 +275,7 @@
         </p>
       </div>
       <div class="vedio">
-        <div class="video w-embed"><video width="100%" hight="auto" controls="true"
+        <div class="video w-embed"><video width="100%" hight="auto" controls="true" playsinline
             src="https://ali-v.cztv.com/cztv/vod/2022/06/09/a1a4935facab47b18f0db10f19fc6830/h264_1500k_mp4.mp4">
           </video></div><img src="images/frame.svg" loading="eager" alt="">
       </div>
@@ -337,7 +294,7 @@
         </p>
       </div>
       <div class="vedio">
-        <div class="video w-embed"><video width="100%" hight="auto" controls="true"
+        <div class="video w-embed"><video width="100%" hight="auto" controls="true" playsinline
             src="https://ali-v.cztv.com/cztv/vod/2022/06/09/0ca62e09186347a3b1a4be239efbd15d/h264_1500k_mp4.mp4">
           </video></div><img src="images/frame.svg" loading="eager" alt="">
       </div>
@@ -356,7 +313,7 @@
     </div>
     <div class="behind pst1">
       <div class="location">
-        <div class="combo"><img src="images/jkdd.png" loading="lazy" alt="" class="name"><img
+        <div class="combo"><img src="images/jkdd.png" loading="lazy" alt="" class="name"><div class="ring ping"></div><img
             src="images/btn_audio_1btn_audio.png" loading="lazy" alt="" class="btn_audio"><img
             src="images/map_btn_audio_play_1map_btn_audio_play.png" loading="lazy" alt="" class="image-6"></div>
         <div class="pic"><img src="images/jkdm.png" loading="eager" data-w-id="b1fe008f-3d1c-4b76-01de-4280047b5294"
@@ -365,7 +322,7 @@
     </div>
     <div class="behind pst2">
       <div class="location">
-        <div class="combo"><img loading="lazy" src="images/xagq.png" alt="" class="name"><img
+        <div class="combo"><img loading="lazy" src="images/xagq.png" alt="" class="name"><div class="ring ping"></div><img
             src="images/btn_audio_1btn_audio.png" loading="lazy" alt="" class="btn_audio"></div>
         <div class="pic"><img loading="eager" data-w-id="5e87dbf6-0600-35c2-af52-25f5434f9ab1" src="images/xacq.png"
             alt="" class="pic2"></div>
@@ -373,7 +330,7 @@
     </div>
     <div class="behind pst3">
       <div class="location">
-        <div class="combo"><img loading="lazy" src="images/wzybc_1.png" alt="" class="name"><img
+        <div class="combo"><img loading="lazy" src="images/wzybc_1.png" alt="" class="name"><div class="ring ping"></div><img
             src="images/btn_audio_1btn_audio.png" loading="lazy" alt="" class="btn_audio"></div>
         <div class="pic"><img loading="eager" data-w-id="c4be2656-58f1-8a46-d0f3-b2efc86485e5" src="images/wzybc.png"
             alt="" class="pic3"></div>
@@ -381,7 +338,7 @@
     </div>
     <div class="behind pst4">
       <div class="location">
-        <div class="combo"><img loading="lazy" src="images/yjzzj.png" alt="" class="name"><img
+        <div class="combo"><img loading="lazy" src="images/yjzzj.png" alt="" class="name"><div class="ring ping"></div><img
             src="images/btn_audio_1btn_audio.png" loading="lazy" alt="" class="btn_audio"></div>
         <div class="pic"><img loading="eager" data-w-id="93f8e99e-66fd-8c8c-7b00-b8483e6936fc" src="images/zjgl.png"
             alt="" class="pic4"></div>
@@ -389,7 +346,7 @@
     </div>
     <div class="behind pst5">
       <div class="location">
-        <div class="combo"><img loading="lazy" src="images/pzzz_1.png" alt="" class="name"><img
+        <div class="combo"><img loading="lazy" src="images/pzzz_1.png" alt="" class="name"><div class="ring ping"></div><img
             src="images/btn_audio_1btn_audio.png" loading="lazy" alt="" class="btn_audio"></div>
         <div class="pic"><img loading="eager" data-w-id="e7acdbbf-1899-2fc6-998f-73f625eea28e" src="images/pzzz.png"
             alt="" class="pic5"></div>
@@ -397,7 +354,7 @@
     </div>
     <div class="behind pst6">
       <div class="location">
-        <div class="combo"><img loading="lazy" src="images/nbdmox.png" alt="" class="name"><img
+        <div class="combo"><img loading="lazy" src="images/nbdmox.png" alt="" class="name"><div class="ring ping"></div><img
             src="images/btn_audio_1btn_audio.png" loading="lazy" alt="" class="btn_audio"></div>
         <div class="pic"><img loading="eager" data-w-id="b8680cc4-187a-5fbb-3c24-fd2a67a3b820" src="images/mox.png"
             alt="" class="pic6"></div>
@@ -405,7 +362,7 @@
     </div>
     <div class="behind pst7">
       <div class="location">
-        <div class="combo"><img loading="lazy" src="images/hcgy_1.png" alt="" class="name"><img
+        <div class="combo"><img loading="lazy" src="images/hcgy_1.png" alt="" class="name"><div class="ring ping"></div><img
             src="images/btn_audio_1btn_audio.png" loading="lazy" alt="" class="btn_audio"></div>
         <div class="pic"><img loading="eager" data-w-id="a595af4c-1650-ab2f-b3e8-03aa08193cb8" src="images/hcgy.png"
             alt="" class="pic7"></div>
@@ -413,7 +370,7 @@
     </div>
     <div class="front pst8">
       <div class="location">
-        <div class="combo"><img loading="lazy" src="images/lkscs_1.png" alt="" class="name"><img
+        <div class="combo"><img loading="lazy" src="images/lkscs_1.png" alt="" class="name"><div class="ring ping"></div><img
             src="images/btn_audio_1btn_audio.png" loading="lazy" alt="" class="btn_audio"></div>
         <div class="pic"><img loading="eager" data-w-id="2e18cf35-50f0-a18c-1dbb-a8a69c763e3a" src="images/lkscs.png"
             alt="" class="pic8"></div>
@@ -421,7 +378,7 @@
     </div>
     <div class="front pst9">
       <div class="location">
-        <div class="combo"><img loading="lazy" src="images/jhlcj.png" alt="" class="name"><img
+        <div class="combo"><img loading="lazy" src="images/jhlcj.png" alt="" class="name"><div class="ring ping"></div><img
             src="images/btn_audio_1btn_audio.png" loading="lazy" alt="" class="btn_audio"></div>
         <div class="pic"><img src="images/jhlc.png" loading="eager" data-w-id="ae832fde-6f37-1466-3390-00af8a7d07c6"
             alt="" class="pic9"></div>
@@ -429,7 +386,7 @@
     </div>
     <div class="front pst10">
       <div class="location">
-        <div class="combo"><img loading="lazy" src="images/syfmb.png" alt="" class="name"><img
+        <div class="combo"><img loading="lazy" src="images/syfmb.png" alt="" class="name"><div class="ring ping"></div><img
             src="images/btn_audio_1btn_audio.png" loading="lazy" alt="" class="btn_audio"></div>
         <div class="pic"><img loading="eager" data-w-id="a17406a0-e208-bc36-1502-41fb63d62e8f" src="images/syf.png"
             alt="" class="pic10"></div>
@@ -437,7 +394,7 @@
     </div>
     <div class="front pst11">
       <div class="location">
-        <div class="combo"><img loading="lazy" src="images/wj.png" alt="" class="name"><img
+        <div class="combo"><img loading="lazy" src="images/wj.png" alt="" class="name"><div class="ring ping"></div><img
             src="images/btn_audio_1btn_audio.png" loading="lazy" alt="" class="btn_audio"></div>
         <div class="pic"><img loading="eager" data-w-id="0ad11cab-b19c-9cf8-c6a8-0ae5d3f051a7" src="images/wj_1.png"
             alt="" class="pic11"></div>
@@ -445,7 +402,7 @@
     </div>
     <div class="front pst12">
       <div class="location">
-        <div class="combo"><img loading="lazy" src="images/xhcl_1.png" alt="" class="name"><img
+        <div class="combo"><img loading="lazy" src="images/xhcl_1.png" alt="" class="name"><div class="ring ping"></div><img
             src="images/btn_audio_1btn_audio.png" loading="lazy" alt="" class="btn_audio"></div>
         <div class="pic"><img loading="eager" data-w-id="30fa9465-80f6-de7d-aa8f-1cba5f0498db" src="images/xhcl.png"
             alt="" class="pic12"></div>

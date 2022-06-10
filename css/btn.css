@@ -1,0 +1,112 @@
+/* Styles Begin Here */
+* {
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+    border: none;
+}
+body {
+    background-color: #e1e1e1;
+    font-family: Helvetica, Arial, sans-serif;
+}
+div.container {
+    float: left;
+    display: block;
+    margin: 100px;
+    position: relative;
+}
+div.ring {
+    display: block;
+    float: left;
+    position: absolute;
+    border-radius: 55px;
+    padding: 50px;
+    transform: scale(.25);
+    -ms-transform: scale(.25);
+    /* IE 9 */
+    -webkit-transform: scale(.25);
+    /* Safari and Chrome */
+    -o-transform: scale(.25);
+    /* Opera */
+    -moz-transform: scale(.25);
+    /* Firefox */
+    -webkit-transform-origin: center;
+    animation-iteration-count: infinite;
+    /* W3C and Opera */
+    -moz-animation-iteration-count: infinite;
+    /* Firefox */
+    -webkit-animation-iteration-count: infinite;
+    /*Safari and Chrome*/
+    -webkit-transform-origin: center;
+}
+.ping {
+    top: -35px;
+    left: -35px;
+    border: solid #FFF 3px;
+    -moz-animation-duration: 3s;
+    -webkit-animation-duration: 3s;
+    -moz-animation-name: ping;
+    -webkit-animation-name: ping;
+}
+.small-ping {
+    top: -42px;
+    left: -42px;
+    border: double #77d2ff 10px;
+    -moz-animation-duration: .75s;
+    -webkit-animation-duration: .75s;
+    -moz-animation-name: smallping;
+    -webkit-animation-name: smallping;
+}
+@-webkit-keyframes ping {
+    from {
+        transform: scale(.25);
+        -ms-transform: scale(.25);
+        /* IE 9 */
+        -webkit-transform: scale(.25);
+        /* Safari and Chrome */
+        -o-transform: scale(.25);
+        /* Opera */
+        -moz-transform: scale(.25);
+        /* Firefox */
+        opacity: 1;
+    }
+    to {
+        transform: scale(1);
+        -ms-transform: scale(1);
+        /* IE 9 */
+        -webkit-transform: scale(1);
+        /* Safari and Chrome */
+        -o-transform: scale(1);
+        /* Opera */
+        -moz-transform: scale(1);
+        /* Firefox */
+        opacity: 0;
+    }
+}
+@-webkit-keyframes smallping {
+    from {
+        transform: scale(.1);
+        -ms-transform: scale(.1);
+        /* IE 9 */
+        -webkit-transform: scale(.1);
+        /* Safari and Chrome */
+        -o-transform: scale(.1);
+        /* Opera */
+        -moz-transform: scale(.1);
+        /* Firefox */
+        opacity: 1;
+    }
+    to {
+        color: white;
+        transform: scale(.55);
+        -ms-transform: scale(.55);
+        /* IE 9 */
+        -webkit-transform: scale(.55);
+        /* Safari and Chrome */
+        -o-transform: scale(.55);
+        /* Opera */
+        -moz-transform: scale(.55);
+        /* Firefox */
+        opacity: 0;
+    }
+}
